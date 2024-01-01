@@ -36,16 +36,16 @@ public class CommandeRestController {
         return commande;
     }
     @PostMapping("/commandes")
-    public Commande saveCommande(@RequestBody Commande client){
-        return commandeRepository.save(client);
+    public Commande saveCommande(@RequestBody Commande commande){
+        return commandeRepository.save(commande);
     }
 
-    @PutMapping("/customers/{id}")
-    public Commande updateCommande(@RequestBody Commande client, @PathVariable Long id){
-        client.setId(id);
-        return commandeRepository.save(client);
+    @PutMapping("/commandes/{id}")
+    public Commande updateCommande(@RequestBody Commande commande, @PathVariable Long id){
+        commande.setId(id);
+        return commandeRepository.save(commande);
     }
-    @DeleteMapping("/customers/{id}")
+    @DeleteMapping("/commandes/{id}")
     public void deleteCommande(@PathVariable Long id){
         commandeRepository.deleteById(id);
     }
