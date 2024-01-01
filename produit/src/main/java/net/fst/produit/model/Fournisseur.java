@@ -1,5 +1,12 @@
 package net.fst.produit.model;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
 public class Fournisseur {
 
     private Long id;
@@ -7,5 +14,5 @@ public class Fournisseur {
     private String lastName;
     private String email;
 
-    private String adress;
+    private String address;
 }

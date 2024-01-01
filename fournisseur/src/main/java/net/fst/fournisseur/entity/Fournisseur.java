@@ -23,6 +23,6 @@ public class Fournisseur {
     private String lastName;
     private String email;
 
-    private String adress;
+    private String address;
 
 }
