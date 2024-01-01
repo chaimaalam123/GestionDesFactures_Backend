@@ -1,6 +1,7 @@
 package net.fst.facture.models;
 
-
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -8,9 +9,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Commande {
+public class Paiement {
     private Long id;
-    private String etatCommande;
-    private Long clientId;
-    private Client client;
+    private String modePaiement;
 }

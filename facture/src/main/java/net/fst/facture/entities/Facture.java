@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import net.fst.facture.enums.EtatFacture;
 import net.fst.facture.models.Commande;
+import net.fst.facture.models.Paiement;
 
 import java.util.Date;
 
@@ -22,9 +23,13 @@ public class Facture {
     private EtatFacture etatFacture;
     private double montantTotal;
     private Date dateFacture;
-    private Long CommandeId;
+    private Long commandeId;
     @Transient
     private Commande commande;
+
+    private Long paiementId;
+    @Transient
+    private Paiement paiement;
 
 
 }
